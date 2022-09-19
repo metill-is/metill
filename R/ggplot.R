@@ -56,8 +56,8 @@ theme_metill <- function() {
                 margin = margin(t = 7, r = 5, b = 5, l = 5)
             ),
             plot.caption.position = "panel",
-            panel.background = element_rect
-            (fill = background,
+            panel.background = element_rect(
+                fill = background,
                 colour = NA
             ),
             plot.background = element_rect(
@@ -158,6 +158,6 @@ scale_y_tufte <- function(...) {
 #' @export
 #'
 #' @examples
-tufte_breaks <- function(x, ...) {
-    ggthemes::extended_range_breaks()(x, ...)
+tufte_breaks <- function(x, n = 5, ...) {
+    ggthemes::extended_range_breaks(n = n, ...)(x)
 }
