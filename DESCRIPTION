@@ -12,8 +12,13 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Imports: 
     cowplot,
+    dataverse,
+    forcats,
     ggthemes,
-    rlang
+    purrr,
+    rlang,
+    tidyr,
+    tidyselect
 URL: https://github.com/bgautijonsson/metill
 BugReports: https://github.com/bgautijonsson/metill/issues
 Depends: 

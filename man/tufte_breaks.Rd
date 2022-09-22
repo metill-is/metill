@@ -4,7 +4,7 @@
 \alias{tufte_breaks}
 \title{Helper function to breate axis breaks that include range values}
 \usage{
-tufte_breaks(x, ...)
+tufte_breaks(x, n = 5, ...)
 }
 \arguments{
 \item{x}{A vector containing the relevant data (x or y axis variable)}
