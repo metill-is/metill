@@ -15,6 +15,7 @@ Imports:
     dataverse,
     forcats,
     ggthemes,
+    plotly,
     purrr,
     rlang,
     tidyr,

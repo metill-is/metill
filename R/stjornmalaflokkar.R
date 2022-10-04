@@ -15,7 +15,9 @@ flokkar_palette <- function() {
         "Viðreisn", "xC", "#ff7d14",
         "Píratar", "xP", "#984ea3",
         "Miðflokkurinn", "xM", "#08306b",
-        "Flokkur fólksins", "xF", "#FBB829"
+        "Flokkur fólksins", "xF", "#FBB829",
+        "Borgarahreyfingin", "xO", "#d78604",
+        "Björt framtíð", "xA", "#cab2d6"
     )
 }
 
@@ -23,6 +25,7 @@ flokkar_palette <- function() {
 #'
 #' @return
 #' @export
+#' @import
 #'
 #' @examples
 gogn_kosningarannsokn <- function() {

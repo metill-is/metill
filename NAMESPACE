@@ -2,6 +2,7 @@
 
 export(flokkar_palette)
 export(gogn_kosningarannsokn)
+export(metill_ggplotly)
 export(scale_x_tufte)
 export(scale_y_tufte)
 export(theme_metill)

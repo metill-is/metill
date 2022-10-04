@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-theme_metill <- function() {
+theme_metill <- function(type = "standalone") {
 
     title <- "#484D6D"
     subtitle <- "#525252"
@@ -104,6 +104,16 @@ theme_metill <- function() {
                 colour = NA
             )
         )
+
+    if (type == "standalone") return(out)
+    else if (type == "blog") {
+        out <- out %+replace%
+            theme(
+                plot.background = element_blank(),
+                panel.background = element_blank(),
+                legend.background = element_blank()
+            )
+    }
 
     out
 }
