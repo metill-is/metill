@@ -5,7 +5,7 @@
 #'
 #' @return
 #' @export
-#' @importFrom plotly ggplotly, layout, config
+#' @import plotly
 #'
 #' @examples
 metill_ggplotly <- function(plot, ...) {

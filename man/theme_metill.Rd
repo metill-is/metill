@@ -4,7 +4,7 @@
 \alias{theme_metill}
 \title{Theme for my blog}
 \usage{
-theme_metill()
+theme_metill(type = "standalone")
 }
 \value{
 A theme object to be used with ggplot plots

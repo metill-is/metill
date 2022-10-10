@@ -13,15 +13,19 @@ RoxygenNote: 7.2.1
 Imports: 
     cowplot,
     dataverse,
+    dbcooper,
+    DBI,
     forcats,
     ggthemes,
     plotly,
     purrr,
     rlang,
+    RPostgres,
     tidyr,
     tidyselect
 URL: https://github.com/bgautijonsson/metill
 BugReports: https://github.com/bgautijonsson/metill/issues
 Depends: 
     ggplot2,
+    R7,
     scales

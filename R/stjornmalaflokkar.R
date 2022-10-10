@@ -25,7 +25,6 @@ flokkar_palette <- function() {
 #'
 #' @return
 #' @export
-#' @import
 #'
 #' @examples
 gogn_kosningarannsokn <- function() {
@@ -77,7 +76,6 @@ gogn_kosningarannsokn <- function() {
 #' @param year
 #'
 #' @return
-#' @import dplyr
 #'
 #' @examples
 preprocess_data_attrition <- function(doi, filename, year) {
@@ -127,7 +125,6 @@ preprocess_data_attrition <- function(doi, filename, year) {
 #' @param year
 #'
 #' @return
-#' @import dplyr
 #'
 #' @examples
 preprocess_data_recruitment <- function(doi, filename, year) {

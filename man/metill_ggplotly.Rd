@@ -2,13 +2,15 @@
 % Please edit documentation in R/plotly.R
 \name{metill_ggplotly}
 \alias{metill_ggplotly}
-\title{Title}
+\title{A customized ggplotly function to fit with Metill's visual theme}
 \usage{
 metill_ggplotly(plot, ...)
 }
 \arguments{
-\item{...}{}
+\item{plot}{A ggplot2 object to be converted to a plotly object}
+
+\item{...}{Other inputs to ggplotly, layout or config from the plotly package}
 }
 \description{
-Title
+A customized ggplotly function to fit with Metill's visual theme
 }
