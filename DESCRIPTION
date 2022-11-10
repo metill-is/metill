@@ -19,6 +19,7 @@ Imports:
     ggthemes,
     plotly,
     purrr,
+    R7,
     rlang,
     RPostgres,
     tidyr,
@@ -27,5 +28,4 @@ URL: https://github.com/bgautijonsson/metill
 BugReports: https://github.com/bgautijonsson/metill/issues
 Depends: 
     ggplot2,
-    R7,
     scales

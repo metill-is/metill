@@ -7,7 +7,7 @@
 <!-- badges: end -->
 
 This package is developed to make the maintenance of plot themes,
-databases etc. easier.
+databases etc. easier. asd
 
 ## Installation
 
