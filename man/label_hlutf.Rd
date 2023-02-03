@@ -10,6 +10,8 @@ label_hlutf(x, accuracy = 0.1, ...)
 \item{x}{Numberic vector to be formatted as percentage}
 
 \item{accuracy}{A number to round to. F.ex. 0.01 shows 2 decimal places.}
+
+\item{...}{Other inputs passed on to scales::label_percent()}
 }
 \value{
 A character vector version of the input number, formatted as percentage with Icelandic localization
