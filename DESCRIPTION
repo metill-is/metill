@@ -13,13 +13,10 @@ RoxygenNote: 7.2.3
 Imports: 
     cowplot,
     dataverse,
-    dbcooper,
-    DBI,
     forcats,
     ggthemes,
     plotly,
     purrr,
-    R7,
     rlang,
     RPostgres,
     tidyr,
