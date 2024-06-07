@@ -128,15 +128,15 @@ theme_metill <- function(type = "standalone") {
 #' @export
 theme_visbending <- function() {
 
-    title <- "#023858"
+    title <- "#003f4a"
 
     subtitle <- "#525252"
 
     caption <- "#36383A"
 
-    axis_text <- "#4A4C45"
+    axis_text <- "#003f4a"
 
-    axis_title <- "black"
+    axis_title <- "#003f4a"
 
 
     strip_background <- "#e0e0e0"
@@ -150,7 +150,7 @@ theme_visbending <- function() {
     axis_title_font <- NULL
     axis_line_col <- "#403d39"
 
-    strip_text <- "#2E2E2E"
+    strip_text <- "#003f4a"
 
 
     base_size <- 14
