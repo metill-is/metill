@@ -1,5 +1,3 @@
-
-
 #' Theme for my blog
 #'
 #' @return A theme object to be used with ggplot plots
@@ -7,6 +5,18 @@
 #'
 #' @examples
 theme_metill <- function(type = "standalone") {
+    box::use(
+        ggplot2 = ggplot2[
+            theme_classic,
+            `%+replace%`,
+            element_text,
+            element_rect,
+            element_line,
+            margin,
+            element_blank,
+            theme
+        ]
+    )
 
     title <- "#484D6D"
 
@@ -70,7 +80,7 @@ theme_metill <- function(type = "standalone") {
             ),
             panel.grid = element_blank(),
             axis.title = element_text(
-                size = base_size ,
+                size = base_size,
                 family = axis_title_font,
                 color = "black",
                 vjust = 1,
@@ -84,7 +94,7 @@ theme_metill <- function(type = "standalone") {
                 colour = "black"
             ),
             axis.ticks = element_line(
-                size = 0.6,
+                linewidth = 0.6,
                 colour = axis_line_col
             ),
             strip.background = element_rect(
@@ -109,8 +119,9 @@ theme_metill <- function(type = "standalone") {
             )
         )
 
-    if (type == "standalone") return(out)
-    else if (type == "blog") {
+    if (type == "standalone") {
+        return(out)
+    } else if (type == "blog") {
         out <- out %+replace%
             theme(
                 plot.background = element_blank(),
@@ -127,7 +138,6 @@ theme_metill <- function(type = "standalone") {
 #' @return A theme object to be used with ggplot plots
 #' @export
 theme_visbending <- function() {
-
     title <- "#003f4a"
 
     subtitle <- "#525252"
@@ -191,7 +201,7 @@ theme_visbending <- function() {
             ),
             panel.grid = element_blank(),
             axis.title = element_text(
-                size = base_size ,
+                size = base_size,
                 family = axis_title_font,
                 color = axis_title,
                 vjust = 1,
@@ -211,7 +221,7 @@ theme_visbending <- function() {
             strip.background = element_rect(
                 fill = strip_background,
                 colour = axis_line_col,
-                size = 0.8
+                linewidth = 0.8
             ),
             strip.text = element_text(
                 size = 0.7 * base_size,
@@ -242,15 +252,12 @@ theme_visbending <- function() {
 #'
 #' @examples
 scale_x_tufte <- function(...) {
-
-
     list(
         theme(axis.line.x = element_blank()),
         ggthemes::geom_rangeframe(sides = "b", size = 0.5, aes(group = "none")),
         scale_x_continuous(...),
         coord_cartesian(clip = "off", default = T)
     )
-
 }
 
 #' Make x, and y axes not touch (y axis part)
@@ -260,16 +267,12 @@ scale_x_tufte <- function(...) {
 #'
 #' @examples
 scale_y_tufte <- function(...) {
-
-
-
     list(
         theme(axis.line.y = element_blank()),
         ggthemes::geom_rangeframe(sides = "l", size = 0.5, aes(group = "none")),
         scale_y_continuous(...),
         coord_cartesian(clip = "off", default = T)
     )
-
 }
 
 
