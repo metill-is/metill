@@ -20,7 +20,8 @@ Imports:
     rlang,
     RPostgres,
     tidyr,
-    tidyselect
+    tidyselect,
+    box
 URL: https://github.com/bgautijonsson/metill
 BugReports: https://github.com/bgautijonsson/metill/issues
 Depends: 
