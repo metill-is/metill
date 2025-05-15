@@ -30,7 +30,7 @@ theme_metill <- function(type = "standalone") {
 
     strip_background <- "#e0e0e0"
 
-    background <- "#faf9f9"
+    background <- "#fdfcfc"
 
 
 
