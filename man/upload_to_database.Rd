@@ -4,10 +4,16 @@
 \alias{upload_to_database}
 \title{Title}
 \usage{
-upload_to_database(dataset)
+upload_to_database(dataset, dataset_name = NULL)
 }
 \arguments{
-\item{dataset}{}
+\item{dataset}{A data frame or tibble to upload.}
+
+\item{dataset_name}{Name to use in the S3 database path. If \code{NULL},
+the function tries to infer a name from the currently open RStudio file.}
+}
+\value{
+Invisibly returns the uploaded dataset name.
 }
 \description{
 Title

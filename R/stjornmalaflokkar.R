@@ -50,17 +50,17 @@ gogn_kosningarannsokn <- function() {
               2003)
 
     d_retention <- purrr::pmap(list(doi = doi, filename = filename, year = year), preprocess_data_attrition) |>
-        purrr::reduce(bind_rows) |>
-        dplyr::mutate_at(vars(current, former), as.character) |>
-        dplyr::mutate_at(vars(current, former), translate_parties) |>
+        purrr::reduce(dplyr::bind_rows) |>
+        dplyr::mutate_at(dplyr::vars(current, former), as.character) |>
+        dplyr::mutate_at(dplyr::vars(current, former), translate_parties) |>
         dplyr::mutate(type = "retention")
 
 
     d_recruitment <- purrr::pmap(list(doi = doi, filename = filename, year = year), preprocess_data_recruitment) |>
-        purrr::reduce(bind_rows) |>
-        dplyr::mutate_at(vars(current, former), as.character) |>
-        dplyr::mutate_at(vars(current, former), translate_parties) |>
-        mutate(type = "recruitment")
+        purrr::reduce(dplyr::bind_rows) |>
+        dplyr::mutate_at(dplyr::vars(current, former), as.character) |>
+        dplyr::mutate_at(dplyr::vars(current, former), translate_parties) |>
+        dplyr::mutate(type = "recruitment")
 
     dplyr::bind_rows(
         d_retention,
@@ -83,9 +83,13 @@ preprocess_data_attrition <- function(doi, filename, year) {
                                      doi,
                                      original = TRUE,
                                      .f = haven::read_sav) |>
-        select(current = starts_with("prtvote"), former = starts_with("prtfvote"), age) |>
-        mutate_at(vars(everything(), -age), forcats::as_factor) |>
-        filter(
+        dplyr::select(
+            current = tidyselect::starts_with("prtvote"),
+            former = tidyselect::starts_with("prtfvote"),
+            age
+        ) |>
+        dplyr::mutate_at(dplyr::vars(dplyr::everything(), -age), forcats::as_factor) |>
+        dplyr::filter(
             !as.character(current) %in% c(
                 "No, did not vote",
                 "Not applicable",
@@ -105,16 +109,20 @@ preprocess_data_attrition <- function(doi, filename, year) {
                 "Refuses to answer")
         ) |>
         tidyr::drop_na(current) |>
-        group_by(current, former) |>
-        summarise(n = n(),
-                  age = mean(age),
-                  .groups = "drop") |>
-        arrange(former, desc(n)) |>
-        group_by(former) |>
-        mutate(p = n / sum(n),
-               cum_p = cumsum(p)) |>
-        ungroup() |>
-        mutate(year = year)
+        dplyr::group_by(current, former) |>
+        dplyr::summarise(
+            n = dplyr::n(),
+            age = mean(age),
+            .groups = "drop"
+        ) |>
+        dplyr::arrange(former, dplyr::desc(n)) |>
+        dplyr::group_by(former) |>
+        dplyr::mutate(
+            p = n / sum(n),
+            cum_p = cumsum(p)
+        ) |>
+        dplyr::ungroup() |>
+        dplyr::mutate(year = year)
 }
 
 
@@ -134,13 +142,13 @@ preprocess_data_recruitment <- function(doi, filename, year) {
         original = TRUE,
         .f = haven::read_sav
     ) |>
-        select(
-            current = starts_with("prtvote"),
-            former = starts_with("prtfvote"),
+        dplyr::select(
+            current = tidyselect::starts_with("prtvote"),
+            former = tidyselect::starts_with("prtfvote"),
             age
         ) |>
-        mutate_at(vars(everything(), -age), forcats::as_factor) |>
-        filter(
+        dplyr::mutate_at(dplyr::vars(dplyr::everything(), -age), forcats::as_factor) |>
+        dplyr::filter(
             !as.character(former) %in% c("No, did not vote",
                                          "Not applicable",
                                          "Don‘t remember what I voted",
@@ -159,16 +167,20 @@ preprocess_data_recruitment <- function(doi, filename, year) {
                                          "Refuses to answer")
         ) |>
         tidyr::drop_na(former) |>
-        group_by(current, former) |>
-        summarise(n = n(),
-                  age = mean(age),
-                  .groups = "drop") |>
-        arrange(current, desc(n)) |>
-        group_by(current) |>
-        mutate(p = n / sum(n),
-               cum_p = cumsum(p)) |>
-        ungroup() |>
-        mutate(year = year)
+        dplyr::group_by(current, former) |>
+        dplyr::summarise(
+            n = dplyr::n(),
+            age = mean(age),
+            .groups = "drop"
+        ) |>
+        dplyr::arrange(current, dplyr::desc(n)) |>
+        dplyr::group_by(current) |>
+        dplyr::mutate(
+            p = n / sum(n),
+            cum_p = cumsum(p)
+        ) |>
+        dplyr::ungroup() |>
+        dplyr::mutate(year = year)
 }
 
 #' Title

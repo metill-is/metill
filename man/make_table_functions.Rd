@@ -9,6 +9,10 @@ make_table_functions(table)
 \arguments{
 \item{table}{}
 }
+\value{
+Creates a single helper function named \verb{mtl_<table>}
+in the global environment.
+}
 \description{
 Title
 }

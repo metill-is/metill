@@ -6,6 +6,10 @@
 \usage{
 init_db()
 }
+\value{
+Invisibly returns a list of created helper function names.
+}
 \description{
-Initialize the Metill Database
+Creates helper functions in the global environment, one per table
+in the Metill S3 bucket.
 }
