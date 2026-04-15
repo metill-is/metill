@@ -2,20 +2,24 @@
 % Please edit documentation in R/scales.R
 \name{isk}
 \alias{isk}
-\title{Format Numbers as Icelandic Krona}
+\title{Format Numbers as Icelandic Kr<U+00F3>na}
 \usage{
 isk(x, scale = 1, suffix = NULL, ...)
 }
 \arguments{
 \item{x}{The number to be formatted as ISK}
 
-\item{scale}{A scaling factor: x will be multiplied by scale before formatting.}
+\item{scale}{A scaling factor: x will be multiplied by scale before
+formatting.}
 
-\item{suffix}{If NULL the suffix will try to be decided based on the scale.}
+\item{suffix}{If NULL the suffix will try to be decided based on
+the scale.}
+
+\item{...}{Other inputs passed on to scales::number()}
 }
 \value{
-A characted vector version of the input number formatted as ISK
+A character vector version of the input number formatted as ISK
 }
 \description{
-Format Numbers as Icelandic Krona
+Format Numbers as Icelandic Kr<U+00F3>na
 }

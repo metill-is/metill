@@ -2,13 +2,17 @@
 % Please edit documentation in R/ggplot.R
 \name{theme_metill}
 \alias{theme_metill}
-\title{Theme for my blog}
+\title{Metill ggplot2 theme}
 \usage{
 theme_metill(type = "standalone")
 }
+\arguments{
+\item{type}{Theme type: "standalone" (default, with background) or
+"blog" (transparent backgrounds for web embedding)}
+}
 \value{
-A theme object to be used with ggplot plots
+A ggplot2 theme object
 }
 \description{
-Theme for my blog
+Metill ggplot2 theme
 }

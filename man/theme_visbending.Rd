@@ -2,13 +2,13 @@
 % Please edit documentation in R/ggplot.R
 \name{theme_visbending}
 \alias{theme_visbending}
-\title{Theme for the paper Vísbending}
+\title{Theme for Visbending}
 \usage{
 theme_visbending()
 }
 \value{
-A theme object to be used with ggplot plots
+A ggplot2 theme object
 }
 \description{
-Theme for the paper Vísbending
+Theme for Visbending
 }

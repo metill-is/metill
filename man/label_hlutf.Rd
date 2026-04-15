@@ -2,20 +2,18 @@
 % Please edit documentation in R/scales.R
 \name{label_hlutf}
 \alias{label_hlutf}
-\title{Create a Labeller to Format Numbers as Percentages with Icelandic Standards}
+\title{Create a Labeller to Format Percentages with Icelandic Standards}
 \usage{
-label_hlutf(x, accuracy = 0.1, ...)
+label_hlutf(accuracy = 0.1, ...)
 }
 \arguments{
-\item{x}{Numberic vector to be formatted as percentage}
-
-\item{accuracy}{A number to round to. F.ex. 0.01 shows 2 decimal places.}
+\item{accuracy}{A number to round to. E.g. 0.01 shows 2 decimal places.}
 
 \item{...}{Other inputs passed on to scales::label_percent()}
 }
 \value{
-A character vector version of the input number, formatted as percentage with Icelandic localization
+A labelling function for use with ggplot2 scales
 }
 \description{
-Create a Labeller to Format Numbers as Percentages with Icelandic Standards
+Create a Labeller to Format Percentages with Icelandic Standards
 }

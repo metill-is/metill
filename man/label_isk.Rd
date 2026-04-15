@@ -2,20 +2,24 @@
 % Please edit documentation in R/scales.R
 \name{label_isk}
 \alias{label_isk}
-\title{Crate a Labeller to Format Numbers as Icelandic Krona}
+\title{Create a Labeller to Format Numbers as Icelandic Kr<U+00F3>na}
 \usage{
 label_isk(scale = 1, suffix = NULL, accuracy = 1, ...)
 }
 \arguments{
-\item{scale}{A scaling factor: x will be multiplied by scale before formatting.}
+\item{scale}{A scaling factor: x will be multiplied by scale before
+formatting.}
 
-\item{suffix}{If NULL the suffix will try to be decided based on the scale.}
+\item{suffix}{If NULL the suffix will try to be decided based on
+the scale.}
 
-\item{x}{The number to be formatted as ISK}
+\item{accuracy}{A number to round to.}
+
+\item{...}{Other inputs passed on to scales::label_number()}
 }
 \value{
-A characted vector version of the input number formatted as ISK
+A labelling function for use with ggplot2 scales
 }
 \description{
-Crate a Labeller to Format Numbers as Icelandic Krona
+Create a Labeller to Format Numbers as Icelandic Kr<U+00F3>na
 }

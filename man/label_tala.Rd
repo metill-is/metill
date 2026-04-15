@@ -4,16 +4,15 @@
 \alias{label_tala}
 \title{Create a Labeller to Format Numbers with Icelandic Standards}
 \usage{
-label_tala(x, accuracy = 0.1, ...)
+label_tala(accuracy = 0.1, ...)
 }
 \arguments{
-\item{x}{Numeric vector to be formatted as percentage}
+\item{accuracy}{A number to round to. E.g. 0.01 shows 2 decimal places.}
 
-\item{accuracy}{A number to round to. F.ex. 0.01 shows 2 decimal places.
-#' @param ... Other inputs passed on to scales::label_number()}
+\item{...}{Other inputs passed on to scales::label_number()}
 }
 \value{
-A character vector version of the input number, formatted as percentage with Icelandic localization
+A labelling function for use with ggplot2 scales
 }
 \description{
 Create a Labeller to Format Numbers with Icelandic Standards

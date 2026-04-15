@@ -2,13 +2,13 @@
 % Please edit documentation in R/ggplot.R
 \name{theme_gimaldid}
 \alias{theme_gimaldid}
-\title{Theme for Gímaldið}
+\title{Theme for Gimaldid}
 \usage{
 theme_gimaldid()
 }
 \value{
-A theme object to be used with ggplot plots
+A ggplot2 theme object
 }
 \description{
-Theme for Gímaldið
+Theme for Gimaldid
 }

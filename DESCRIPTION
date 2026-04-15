@@ -1,31 +1,26 @@
 Package: metill
 Title: Utility Functions for Metill Data Products
 Version: 0.0.0.9000
-Authors@R: 
-    person("Brynjólfur Gauti", "Jónsson", role = c("aut", "cre"))
-Description: Shared utilities used across Metill projects, including
-    ggplot2 themes, Icelandic number formatting helpers, political party
-    palettes, and data access functions.
+Authors@R:
+    person("Brynjólfur Gauti", "Jónsson",
+           email = "brynjolfur@metill.is",
+           role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-4730-5584"))
+Description: ggplot2 themes and Icelandic number formatting helpers
+    for Metill data products. Provides theme_metill() and related
+    themes, plus isk(), hlutf(), and tala() scale formatters using
+    Icelandic conventions.
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
-Imports: 
-    arrow,
-    dataverse,
-    dplyr,
-    forcats,
-    haven,
-    plotly,
-    purrr,
-    rstudioapi,
-    stringr,
-    tibble,
-    tidyr,
-    tidyselect,
-    box
+RoxygenNote: 7.3.3
+Imports:
+    plotly
 URL: https://github.com/metill-is/metill
 BugReports: https://github.com/metill-is/metill/issues
 Depends: 
     ggplot2,
     scales
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

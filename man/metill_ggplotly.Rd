@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotly.R
 \name{metill_ggplotly}
 \alias{metill_ggplotly}
-\title{A customized ggplotly function to fit with Metill's visual theme}
+\title{Convert ggplot2 to plotly with Metill styling}
 \usage{
 metill_ggplotly(plot, ...)
 }
@@ -11,6 +11,10 @@ metill_ggplotly(plot, ...)
 
 \item{...}{Other inputs to ggplotly, layout or config from the plotly package}
 }
+\value{
+A plotly object with transparent backgrounds, Lato font,
+and hidden mode bar
+}
 \description{
-A customized ggplotly function to fit with Metill's visual theme
+Convert ggplot2 to plotly with Metill styling
 }

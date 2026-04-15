@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # metill <img src="man/figures/logo.png" align="right" height="139" />
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/metill-is/metill/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/metill-is/metill/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 This package is developed to make the maintenance of plot themes, databases etc. easier. asd

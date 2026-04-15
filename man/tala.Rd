@@ -7,14 +7,14 @@
 tala(x, accuracy = 0.1, ...)
 }
 \arguments{
-\item{x}{Numberic vector to be formatted as percentage}
+\item{x}{Numeric vector to be formatted}
 
-\item{accuracy}{A number to round to. F.ex. 0.01 shows 2 decimal places.}
+\item{accuracy}{A number to round to. E.g. 0.01 shows 2 decimal places.}
 
 \item{...}{Other inputs passed on to scales::number()}
 }
 \value{
-A character vector version of the input number, formatted as percentage with Icelandic localization
+A character vector formatted with Icelandic number conventions
 }
 \description{
 Format Numbers with Icelandic Standards
